@@ -9,11 +9,6 @@
     font-family: -apple-system, sans-serif;
 }
 
-html {
-
-    overflow-x: hidden;
-}
-
 body {
     background-color:white;
     color: black;
@@ -34,8 +29,23 @@ body {
     backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
-
-.navbar{
+.header img{
+    position: fixed;
+}
+.propic{
     display: flex;
-    justify-content:space-between;
+    flex-direction: row;
+}
+.navbar{
+    background: rgb(204, 204, 198);
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+
+    gap: 10px;
+}
+.navbar a{
+    padding: 20px;
 }
