@@ -9,9 +9,11 @@
     font-family: -apple-system, sans-serif;
 }
 :root{
-    --bg-clr:#3d3d3d;
-    --2nd_bg-clr:#696969;
-    --text-clr:white;
+    --bg-clr:#474747;
+    --2nd_bg-clr:#767676;
+    --3rd_bg-clr:#6BE347;
+    --text-clr_d-bg:rgb(255, 255, 255);
+    --text-clr_l_bg:rgb(226, 224, 224);
     --active-clr:red;
 }
 
@@ -23,8 +25,9 @@ body {
 
 /* HEADER */
 .header {
+  position: fixed;
   width: 100%;
-  padding: 15px 30px;
+  padding: 10px 20px;
   background: var(--2nd_bg-clr);
   display: flex;
   align-items: center;
@@ -52,23 +55,23 @@ body {
 
 /* NAV MENU */
 .nav-menu {
-  background: #4a4a4a;
-  padding: 8px 25px;
-  border-radius: 25px;
+  background: var(--bg-clr);
+  padding: 10px 40px;
+  border-radius: 30px;
   display: flex;
-  gap: 30px;
 }
 
 .nav-item {
   text-decoration: none;
-  color: white;
+  color: var(--text-clr_d-bg);
   font-size: 16px;
-  padding: 8px 20px;
-  border-radius: 20px;
+  padding: 8px 30px;
+  border-radius:30px;
 }
 
 .nav-item.active {
-  color:var(--active-clr);
+  color:var(--text-clr_l_bg);
+  background-color: var(--2nd_bg-clr);
 }
 
 
@@ -78,8 +81,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     gap: 30px;
-    height: 90vh;
 }
 
 .my_image img {
@@ -87,14 +90,38 @@ body {
     height: 50%;
     border-radius: 50%;
 }
+.right-side{
+  display: flex;
+  flex-direction: column;
+}
 
 .short_data {
     width: 350px;
-    padding: 20px;
-    width: 50%;
-    background: var(--2nd_bg-clr);
-    border-radius: 15px;
-    color: var(--text-clr);
+    color: var(--text-clr_l_bg);
     font-size: 16px;
     line-height: 1.5;
+}
+
+/* resume section */
+
+.resume{
+  background-color: var(--2nd_bg-clr);
+ padding: 8px;
+  display: flex;
+  margin-top: 40px;
+  border-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume p{
+  color: var(--text-clr_l_bg);
+  margin-left: 10%;
+}
+.resume button a{
+  color: var(--text-clr_d-bg);
+}
+.resume button{
+padding: 8px 50px;
+border-radius: 30px;
+  background-color: var(--3rd_bg-clr);
 }
