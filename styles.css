@@ -24,17 +24,33 @@ body {
   font-family: Arial, sans-serif;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 20px 10px 10px;
+}
+section.about-section{
+padding-top: 100px;
+}
+
 /* HEADER */
 .header {
-  z-index: 1;
   position: fixed;
   width: 100%;
-  padding: 10px 20px;
-  background: var(--2nd_bg-clr);
+  top: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-sizing: border-box;
+  padding: 10px 20px;
+  background: var(--2nd_bg-clr);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
 }
 
 /* LEFT SIDE (circle + Name) */
@@ -134,41 +150,13 @@ body {
   background-color: var(--3rd_bg-clr);
 }
 
-
-/* about page */
-.about-container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-  padding: 20px;
-  gap: 30px;
+/* section */
+.page-head {
+  font-weight: bold;
+  font-size: 30px;
 }
 
+/*about section */
 .about-section {
   position: relative;
-  background-color: var(--2nd_bg-clr);
-  border-radius: 20px;
-  padding: 10px;
-}
-.heading{
- align-items: center;
-}
-
-.about-section h2 {
-  display: flex;
-  gap: 10px;
-}
-
-.about-section i {
-  font-size: 40px;
-}
-.degree-section{
-  display: flex;
-  gap: 30px;
-}
-.degree{
-  background-color: var(--bg-clr);
-  padding: 10px;
-  border-radius: 20px;
 }
