@@ -1,1 +1,60 @@
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    menu.classList.remove('active');
+
+}
+
+
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Junior Engineer.', 'Web Designer.', 'Embedded Developer.', 'Artist.'],
+    typeSpeed: 50,
+    backSpeed: 80,
+    backDelay: 1200,
+    loop: true,
+});
+
+
+
+// 1. Select all sections that have an id
+const sections = document.querySelectorAll("section");
+
+// 2. Select all navigation links
+const navLinks = document.querySelectorAll(".nav-item");
+
+// 3. Function to handle active nav link on scroll
+window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    // 4. Loop through each section
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop; // distance from top
+        const sectionHeight = section.offsetHeight;
+
+        // 5. Check if the section is currently in view
+        if (
+            pageYOffset >= sectionTop - 150 &&
+            pageYOffset < sectionTop + sectionHeight - 150
+        ) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    // 6. Remove active class from all nav items
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+
+        // 7. Add active class to the matching nav item
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+        }
+    });
+});
