@@ -1,3 +1,4 @@
+//menu icon visibilty while changing the screen size
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -13,7 +14,7 @@ window.onscroll = () => {
 }
 
 
-
+//change multiple text on the profile section
 const typed = new Typed('.multiple-text', {
     strings: ['Junior Engineer.', 'Web Designer.', 'Embedded Developer.', 'Artist.'],
     typeSpeed: 50,
@@ -24,22 +25,22 @@ const typed = new Typed('.multiple-text', {
 
 
 
-// 1. Select all sections that have an id
+// Select all sections that have an id
 const sections = document.querySelectorAll("section");
 
-// 2. Select all navigation links
+// Select all navigation links
 const navLinks = document.querySelectorAll(".nav-item");
 
-// 3. Function to handle active nav link on scroll
+// Function to handle active nav link on scroll
 window.addEventListener("scroll", () => {
     let currentSection = "";
 
-    // 4. Loop through each section
+    // Loop through each section
     sections.forEach((section) => {
         const sectionTop = section.offsetTop; // distance from top
         const sectionHeight = section.offsetHeight;
 
-        // 5. Check if the section is currently in view
+        //  Check if the section is currently in view
         if (
             pageYOffset >= sectionTop - 150 &&
             pageYOffset < sectionTop + sectionHeight - 150
@@ -48,11 +49,11 @@ window.addEventListener("scroll", () => {
         }
     });
 
-    // 6. Remove active class from all nav items
+    //  Remove active class from all nav items
     navLinks.forEach((link) => {
         link.classList.remove("active");
 
-        // 7. Add active class to the matching nav item
+        // Add active class to the matching nav item
         if (link.getAttribute("href") === `#${currentSection}`) {
             link.classList.add("active");
         }
