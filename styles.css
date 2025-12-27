@@ -383,3 +383,27 @@ h3 {
   color: yellow;
   font-size: 20px;
 }
+
+
+/* projects section */
+
+.project-wrapper{
+  display: grid;
+  grid-template-columns:  repeat(2, 2fr);
+  margin-top: 20px;
+  padding: 20px;
+  gap: 30px;
+}
+.project-items{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--2nd_bg-clr);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.project-items p{
+  text-align: justify;
+  letter-spacing: 2px;
+}
