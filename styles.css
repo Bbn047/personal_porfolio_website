@@ -214,6 +214,9 @@ span {
 
 
 /* About section */
+.about{
+  background: var(--2nd_bg-clr);
+}
 .about-me {
   display: flex;
   flex-direction: row;
@@ -251,6 +254,9 @@ span {
   margin-top: 20px;
 }
 
+
+/* education section */
+
 .education-section {
   background: var(--2nd_bg-clr);
   border-radius: 20px;
@@ -262,12 +268,13 @@ span {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 4rem;
+  color: var(--text-clr_d-bg);
 }
 
 .education-icon {
-  color: var(--text-clr_l_bg);
-  font-size: 40px;
+  font-size: 50px;
+  margin-bottom: 10px;
 }
 
 .education-items {
@@ -281,21 +288,19 @@ span {
   height: 300px;
 }
 
-.education-items h3 {
+.education-items h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.education-items h2,
-h3 {
+.education-items h2,h3 {
   margin-top: 10px;
 }
 
 .education-items span {
   padding: 1rem;
-  color: var(--text-clr_d-bg);
 }
 
 /* experience section */
@@ -406,4 +411,88 @@ h3 {
 .project-items p{
   text-align: justify;
   letter-spacing: 2px;
+}
+
+
+/* Contact section*/
+.contact {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: var(--2nd_bg-clr);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 30px;  
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+
+.social{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+.contact-box{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-box .contact-icon{
+ margin: 2px;
+ background: transparent;
+}
+.contact-icon a{
+  border: 1px solid var(--bg-clr);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+   font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    color: var(--bg-clr);
 }

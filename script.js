@@ -59,3 +59,65 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+
+
+// CONTACT FORM VALIDATION
+const form = document.getElementById("contactForm");
+
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const subject = document.getElementById("subject");
+        const message = document.getElementById("message");
+
+        let isValid = true;
+
+        // Clear previous errors
+        document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+        // Name validation
+        if (name.value.trim() === "") {
+            showError(name, "Name is required");
+            isValid = false;
+        }
+
+        // Email validation
+        if (email.value.trim() === "") {
+            showError(email, "Email is required");
+            isValid = false;
+        } else if (!validateEmail(email.value)) {
+            showError(email, "Enter a valid email");
+            isValid = false;
+        }
+
+        // Subject validation
+        if (subject.value.trim() === "") {
+            showError(subject, "Subject is required");
+            isValid = false;
+        }
+
+        // Message validation
+        if (message.value.trim() === "") {
+            showError(message, "Message is required");
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert("Message sent successfully!");
+            form.reset();
+        }
+    });
+}
+
+function showError(input, message) {
+    const error = input.nextElementSibling;
+    error.textContent = message;
+}
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
