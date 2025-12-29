@@ -1,12 +1,13 @@
 //menu icon visibilty while changing the screen size
 let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('.nav-menu');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
 
+//show active item on scrolling
 window.onscroll = () => {
     menu.classList.remove('bx-x');
     menu.classList.remove('active');
@@ -63,15 +64,15 @@ window.addEventListener("scroll", () => {
 
 
 // CONTACT FORM VALIDATION
-const form = document.getElementById("contactForm");
+const form = document.getElementById("form-group");
 
 if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
+        //taking input fields
         const name = document.getElementById("name");
         const email = document.getElementById("email");
-        const subject = document.getElementById("subject");
         const message = document.getElementById("message");
 
         let isValid = true;
@@ -91,12 +92,6 @@ if (form) {
             isValid = false;
         } else if (!validateEmail(email.value)) {
             showError(email, "Enter a valid email");
-            isValid = false;
-        }
-
-        // Subject validation
-        if (subject.value.trim() === "") {
-            showError(subject, "Subject is required");
             isValid = false;
         }
 
