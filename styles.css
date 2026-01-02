@@ -20,8 +20,8 @@
 
 body {
   margin: 0;
-  background: var(--bg-clr);
-  color: var(--text-clr_d-bg);
+  background: white;
+  color: var(--text-clr_l_bg);
   font-family: Arial, sans-serif;
 }
 
@@ -379,6 +379,13 @@ h3 {
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 5px var(--2nd_bg-clr);
+  transition: 0.3s ease;
+}
+.certificate-items:hover{
+  box-shadow: 0 0 15px var(--bg-clr),
+  0 0 25px var(--bg-clr),
+  0 0 35px var(--bg-clr);
+  transform: scale(1.04);
 }
 
 .certificate-items .badge {
@@ -397,6 +404,9 @@ h3 {
 
 
 /* projects section */
+.project{
+  background: var(--2nd_bg-clr);
+}
 
 .project-wrapper {
   display: grid;
@@ -410,7 +420,8 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid var(--2nd_bg-clr);
+  border: 1px solid var(--bg-clr);
+  color: var(--text-clr_d-bg);
   border-radius: 20px;
   padding: 30px;
 }
@@ -422,16 +433,13 @@ h3 {
 
 
 /* Contact section*/
-.contact {
- background: var(--2nd_bg-clr);
-}
 
 .contact-content {
    margin: 60px auto;
   padding: 20px;
    max-width: 600px;
   margin-top: 30px;
-  background-color: var(--bg-clr);
+  background-color: var(--2nd_bg-clr);
    color: var(--text-clr_d-bg);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
