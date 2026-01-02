@@ -116,3 +116,14 @@ function showError(input, message) {
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+
+
+
+// mobile menu icon for responsive design
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.querySelector('.nav-menu');
+
+menuIcon.addEventListener('click', () => {
+  // toggle a class that shows the menu
+  navMenu.classList.toggle('active');
+});
