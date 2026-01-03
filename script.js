@@ -121,19 +121,20 @@ function validateEmail(email) {
 
 /* modal box */
 const modal = document.getElementById("projectModal");
-const modalTitle = getElementById("modalTitle")
-const modalData= document.getElementById("modalData");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
 const closeBtn = document.querySelector(".modal-close");
 
+// Grab all project items
 document.querySelectorAll(".project-items").forEach(project => {
   project.addEventListener("click", () => {
-    // Copy the content from the clicked project
+    // Grab h2 and p from the clicked project
     const title = project.querySelector("h2").textContent;
-    const data = project.querySelector("p").textContent;
+    const description = project.querySelector("p").textContent;
 
-    //show modal data
+    // Set modal content
     modalTitle.textContent = title;
-    modalData.textContent = data;
+    modalDescription.textContent = description;
 
     // Show modal
     modal.style.display = "flex";
@@ -154,4 +155,5 @@ function closeModal() {
   modal.style.display = "none";
   document.body.style.overflow = "auto";
 }
+
 

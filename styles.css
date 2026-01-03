@@ -573,8 +573,8 @@ h3 {
   overflow-y: auto;
 }
 
-.modal-title{
-  margin-bottom: 10px;
+.modal-content h2{
+  margin-bottom: 20px;
 }
 /* Close button */
 .modal-close {
@@ -721,6 +721,19 @@ h3 {
   padding: 10px 20px;
   color: var(--text-clr_d-bg);
   font-size: 1.2rem;
+}
+.modal-content{
+  width: 80vw;
+}
+.modal-content h2{
+  margin-right: 25px;
+}
+.modal-content .modal-close{
+   position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 }
