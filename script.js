@@ -119,11 +119,33 @@ function validateEmail(email) {
 
 
 
-// mobile menu icon for responsive design
-const menuIcon = document.getElementById('menu-icon');
-const navMenu = document.querySelector('.nav-menu');
+/* modal box */
+const modal = document.getElementById("projectModal");
+const modalInner = document.getElementById("modalInner");
+const closeBtn = document.querySelector(".modal-close");
 
-menuIcon.addEventListener('click', () => {
-  // toggle a class that shows the menu
-  navMenu.classList.toggle('active');
+document.querySelectorAll(".project-items").forEach(project => {
+  project.addEventListener("click", () => {
+    // Copy the content from the clicked project
+    modalInner.innerHTML = project.innerHTML;
+
+    // Show modal
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
 });
+
+// Close modal
+closeBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+function closeModal() {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
