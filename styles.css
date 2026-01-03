@@ -254,6 +254,8 @@ span {
 .about-content p {
   font-size: large;
   margin-top: 20px;
+  margin-right: 20px;
+  color: var(--text-clr_d-bg);
 }
 
 
@@ -288,6 +290,7 @@ span {
   padding: 20px;
   border-radius: 20px;
   height: 300px;
+  box-shadow: 0 0 15px var(--text-clr_l_bg);
 }
 
 .education-items h2 {
@@ -338,6 +341,7 @@ h3 {
   border-radius: 20px;
   height: 300px;
   color: var(--text-clr_d-bg);
+  box-shadow:  0 0 15px var(--text-clr_l_bg);
 }
 
 .experience-items h3 {
