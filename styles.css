@@ -8,7 +8,9 @@
   scroll-behavior: smooth;
   font-family: -apple-system, sans-serif;
 }
-
+body p{
+   font-family: "Times New Roman", Times, serif;
+}
 :root {
   --bg-clr: #778873;
   --2nd_bg-clr: #A1BC98;
@@ -250,6 +252,9 @@ span {
   margin-top: 10px;
   font-size: 2rem;
 }
+.about .heading2{
+  color: rgb(27, 160, 67);
+}
 
 .about-content p {
   font-size: large;
@@ -289,8 +294,13 @@ span {
   background: var(--bg-clr);
   padding: 20px;
   border-radius: 20px;
-  height: 300px;
+  height: 350px;
   box-shadow: 0 0 15px var(--text-clr_l_bg);
+}
+.education-items img{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 .education-items h2 {
@@ -299,6 +309,9 @@ span {
   align-items: center;
   font-size: 15px;
   justify-content: center;
+}
+.education-items a{
+  color: var(--text-clr_d-bg);
 }
 
 .education-items h2,
@@ -642,7 +655,6 @@ h3 {
 
   .modal-content{
     width: 80vw;
-    height: 80vh;
   }
 }
 
