@@ -9,6 +9,7 @@ menu.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+
 /* ================= SCROLL SECTIONS ACTIVE LINK ================= */
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-item");
