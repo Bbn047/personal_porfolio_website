@@ -416,6 +416,10 @@ h3 {
 .certificate-items .badge {
   font-size: 40px;
 }
+.certificate-items h3{
+  justify-content: center;
+  text-align: center;
+}
 
 .certificate-items img {
   width: 30px;
@@ -452,6 +456,8 @@ h3 {
   cursor: pointer;
   box-shadow: 0 0 5px var(--bg-clr);
   transition: 0.3s ease;
+  font-size: 15px;
+  height: 300px;
 }
 
 .project-items:hover {
