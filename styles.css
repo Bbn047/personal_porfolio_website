@@ -457,7 +457,7 @@ h3 {
   box-shadow: 0 0 5px var(--bg-clr);
   transition: 0.3s ease;
   font-size: 15px;
-  height: 300px;
+ 
 }
 
 .project-items:hover {
