@@ -657,12 +657,6 @@ h3 {
   .home-content {
     margin-left: 0;
   }
-  
-    #menu-icon {
-    display: none;
-    /* show hamburger menu */
-  }
-
 
   .about-me {
     flex-direction: column;
