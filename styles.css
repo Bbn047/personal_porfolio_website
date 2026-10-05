@@ -168,13 +168,13 @@ span {
   font-size: 1.5rem;
   text-align: justify;
 }
- .resume-section {
-    display: flex;
-    flex-direction: row;
-   
-    gap: 20px;
 
-  }
+.resume-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
 
 .resume {
   align-items: center;
@@ -744,6 +744,7 @@ h3 {
     gap: 20px;
   }
 
+ 
   .resume {
     width: 70%;
   }
