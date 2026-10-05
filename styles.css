@@ -171,7 +171,7 @@ span {
 
 .resume-section {
   display: flex;
-  flex-direction: row;
+  
   gap: 10px;
 
 }
@@ -744,7 +744,10 @@ h3 {
     gap: 20px;
   }
 
- 
+ .resume-section{
+  display: flex;
+  flex-direction: column;
+ }
   .resume {
     width: 70%;
   }
