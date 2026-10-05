@@ -747,6 +747,7 @@ h3 {
  .resume-section{
   display: flex;
   flex-direction: column;
+ 
  }
   .resume {
     width: 70%;
